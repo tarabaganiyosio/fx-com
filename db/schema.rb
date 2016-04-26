@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426042515) do
+ActiveRecord::Schema.define(version: 20160426095659) do
 
   create_table "brokers", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +24,37 @@ ActiveRecord::Schema.define(version: 20160426042515) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+    t.string   "capital"
+    t.string   "lang"
+    t.string   "cur"
+    t.string   "order"
+    t.string   "min_lot"
+    t.string   "max_lot"
+    t.string   "cur_pair"
+    t.string   "p_met"
+    t.string   "b_pro"
+    t.string   "state"
+    t.string   "jp_sup"
+    t.string   "p_ref"
+    t.string   "p_fee"
+    t.string   "w_fee"
+    t.string   "m_fee"
+    t.string   "demo"
+    t.string   "multi"
+    t.string   "sp_met"
+    t.string   "tr_sys"
+    t.string   "platform"
+    t.string   "tr_pos"
+    t.string   "gmt"
+    t.string   "rollover"
+    t.string   "ma_cal"
+    t.string   "lo_cut"
+    t.string   "both"
+    t.string   "ea_lim"
+    t.string   "ma_occ"
+    t.string   "ca_trs"
+    t.string   "st_met"
+    t.string   "mo_sup"
   end
 
   add_index "brokers", ["name"], name: "index_brokers_on_name", unique: true
@@ -47,6 +78,7 @@ ActiveRecord::Schema.define(version: 20160426042515) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "state"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

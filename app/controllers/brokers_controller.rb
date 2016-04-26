@@ -25,6 +25,7 @@ class BrokersController < ApplicationController
   private
 
   def broker_params
-    params.require(:broker).permit(:name, :location, :image, :image_cache, :remove_image, :license, :max_lev, :spread, :min_amo, :tr_fee)
+    params.require(:broker).permit(:name, :location, :image, :image_cache, :remove_image, :license, :max_lev, :spread, :min_amo, :tr_fee, :capital, :lang, :cur, :order, :min_lot, :max_lot, :cur_pair, :p_met,
+                        :b_pro, :state, :jp_sup, :p_ref, :p_fee, :w_fee, :m_fee, :demo, :multi, :sp_met, :tr_sys, :platform, :tr_pos, :gmt, :rollover, :ma_cal, :lo_cut, :both, :ea_lim, :ma_occ, :ca_trs, :st_met, :mo_sup)
   end
 end
