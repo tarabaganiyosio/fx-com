@@ -1,0 +1,190 @@
+<h2><%= @broker.name %></h2>
+<div class="container">
+    <div class="top-content">
+        
+        <% if @broker.image? %>
+        <div class="thumbnail">
+            <%= image_tag @broker.image.url %>
+        </div>
+        <% end %>
+        
+        <ul class="top-list">
+            <li><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i>レビューする</a></li>
+            <li><p>吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。</p></li>
+            <li><p>吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。</p></li>
+        </ul><!--top-list-->
+    </div><!--top-content-->
+    <div class="content">
+        <h2>ブローカー詳細</h2>  
+<h3>ブローカー情報</h3>
+<table>
+    <tr>
+        <th>所在地</th>
+        <td><%= @broker.location %></td>
+    </tr>
+    <tr>
+        <th>ライセンス取得地</th>
+        <td><%= @broker.license %></td>
+    </tr>
+    <tr>
+        <th>事業開始日</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>資本金</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>対応言語数</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>日本語対応</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>口座通貨</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>注文方式</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>最小ロット</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>最大ロット</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>提供通貨ペア</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>入金方法</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>KATSUDON</th>
+        <td>タルタルタルタルタルタルタルタルタルタルタルタルタルタルタルタルタルタルタルソース</td>
+    </tr>
+    </table>
+    
+    <h3>スペック</h3>
+    <table>
+    <tr>
+        <th>最大レバレッジ</th>
+        <td><%= @broker.max_lev %></td>
+    </tr>
+    <tr>
+        <th>スプレッド</th>
+        <td><%= @broker.spread %></td>
+    </tr>
+    <tr>
+        <th>初回最低入金額</th>
+        <td><%= @broker.min_amo %></td>
+    </tr>
+    <tr>
+        <th>取引手数料</th>
+        <td><%= @broker.tr_fee %></td>
+    </tr>
+    <tr>
+        <th>KATSUDON</th>
+        <td>タルタルタルタルタルタルタルタルタルタルタルタルタルタルタルタルタルタルタルソース</td>
+    </tr>
+    <tr>
+        <th>入金額の口座反映</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>入金手数料</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>出金手数料</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>口座維持手数料</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>デモ口座</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>複数口座の開設</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>スプレッド方式</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>取引システム</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>プラットフォーム</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>取引可能時間</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>GMT時差</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>ロールオーバー</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>マージンコール</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>ロスカットルール</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>両建て取引</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>EAの使用制限</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>追証発生</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>現物譲渡</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>預託金の保管方法</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>モバイル対応</th>
+        <td></td>
+    </tr>
+    </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div><!--content-->

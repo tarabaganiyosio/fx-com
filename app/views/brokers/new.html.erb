@@ -1,0 +1,41 @@
+<h2>ブローカー新規追加（管理者ページ）</h2>
+<div class="container">
+
+    <div class="content">
+        <%= form_for(@broker) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <% if @broker.image? %>
+    
+        <%= image_tag @broker.image.url %>
+    
+        <% end %><br>
+        <%= f.label :image %><br>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+    
+        <%= f.label :ブローカー名 %>
+        <%= f.text_field :name %>
+
+        <%= f.label :所在地 %>
+        <%= f.text_field :location %>
+
+        <%= f.label :ライセンス取得地 %>
+        <%= f.text_field :license %>
+
+        <%= f.label :最大レバレッジ %>
+        <%= f.text_field :max_lev %>
+
+        <%= f.label :スプレッド %>
+        <%= f.text_field :spread %>
+
+        <%= f.label :初回最低入金額 %>
+        <%= f.text_field :min_amo %>
+
+        <%= f.label :取引手数料 %>
+        <%= f.text_field :tr_fee %>
+
+
+        <%= f.submit "ブローカーを登録", class: "btn btn-large btn-primary" %>
+        <% end %>
+        
+    </div><!--content-->

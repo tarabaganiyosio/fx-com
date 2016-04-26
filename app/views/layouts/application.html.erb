@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ミンコエ</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+<%= render "layouts/header" %>
+
+<div class="wrapper-container">
+    <%= yield %>
+    <div class="side-bar">
+        <h2>サイドバー</h2>
+        <p>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。<br>
+        ここはサイドバーでス。</p>
+    </div><!--side-bar-->
+</div><!--container-->
+</div><!--wrapper-container-->
+</body>
+</html>

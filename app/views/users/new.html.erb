@@ -1,0 +1,35 @@
+<h2>新規ユーザー登録</h2>
+<div class="container">
+    <!--
+    <div class="top-content">
+        
+        <div class="thumbnail">
+        </div>
+        
+        <ul class="top-list">
+            <li><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i>レビューする</a></li>
+            <li><p>吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。</p></li>
+            <li><p>吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。</p></li>
+        </ul>
+    </div>-->
+    
+    <div class="content">
+        <h2>アカウント情報入力</h2>
+        <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        
+        <%= f.label :ユーザー名 %>
+        <%= f.text_field :name %>
+        
+        <%= f.label :メールアドレス %>
+        <%= f.text_field :email %>
+        
+        <%= f.label :パスワード %>
+        <%= f.password_field :password %>
+        
+        <%= f.label :password_confirmation, "⚠ パスワード（確認用）" %>
+        <%= f.password_field :password_confirmation %>
+        
+        <%= f.submit "アカウント作成", class: "btn btn-large btn-primary" %>
+        <% end %>
+    </div><!--content-->
