@@ -17,6 +17,21 @@ class BrokersController < ApplicationController
       end
   end
   
+  def edit
+    @broker = Broker.new
+    @broker = Broker.friendly.find(params[:id])
+  end
+  
+  def update
+    @broker = Broker.new
+    @broker = Broker.friendly.find(params[:id])
+    if @broker.update_attributes(broker_params)
+      redirect_to @broker
+    else
+      render 'edit'
+    end
+  end
+  
   def set_broker
     # @broker = Broker.find(params[:id])
     @broker = Broker.friendly.find(params[:id])

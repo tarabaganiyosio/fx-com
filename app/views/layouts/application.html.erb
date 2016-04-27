@@ -13,23 +13,9 @@
 
 <div class="wrapper-container">
     <%= yield %>
-    <div class="side-bar">
-        <h2>サイドバー</h2>
-        <p>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。<br>
-        ここはサイドバーでス。</p>
-    </div><!--side-bar-->
+    <%= render "layouts/sidebar" %>
 </div><!--container-->
+<%= render "layouts/footer" %>
 </div><!--wrapper-container-->
 </body>
 </html>
