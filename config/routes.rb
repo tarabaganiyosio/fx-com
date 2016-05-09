@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :posts
   resources :writes
   resources :comments
   get 'sessions/new'

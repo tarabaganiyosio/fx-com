@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160506095546) do
+ActiveRecord::Schema.define(version: 20160509155955) do
+
+  create_table "admin_users", force: :cascade do |t|
+    t.string   "first_name",      default: "",    null: false
+    t.string   "last_name",       default: "",    null: false
+    t.string   "role",                            null: false
+    t.string   "email",                           null: false
+    t.boolean  "status",          default: false
+    t.string   "token",                           null: false
+    t.string   "password_digest",                 null: false
+    t.string   "preferences"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -95,6 +110,13 @@ ActiveRecord::Schema.define(version: 20160506095546) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "tittle"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

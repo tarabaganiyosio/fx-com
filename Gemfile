@@ -32,6 +32,15 @@ gem 'friendly_id'
 
 gem "carrierwave"
 
+# vim Gemfile
+gem 'activeadmin', '~> 1.0.0.pre1'
+
+gem 'activeadmin-translate'
+
+gem 'devise'
+
+gem 'devise-i18n'
+
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
 
