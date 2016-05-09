@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <title>ミンコエ</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script>
+    $(function(){
+        $('.show-menu').click( function(){
+          if ($('.top-bar').hasClass('open')){
+            $('.top-bar').stop().slideUp(200).removeClass('open');
+          }else{
+            $('.top-bar').stop().slideDown(200).addClass('open');
+          }
+        });
+        
+        $(window).scroll( function(){
+          if ($('.top-bar').hasClass('open')){
+            $('.top-bar').slideUp(300).removeClass('open');
+          }
+        })
+    });
+  </script>
 </head>
 <body>
-  
 <%= render "layouts/header" %>
-
 <div class="wrapper-container">
     <%= yield %>
     <%= render "layouts/sidebar" %>

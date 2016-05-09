@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426095659) do
+ActiveRecord::Schema.define(version: 20160506095546) do
+
+  create_table "boards", force: :cascade do |t|
+    t.string   "title"
+    t.string   "editor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "brokers", force: :cascade do |t|
     t.string   "name"
@@ -55,9 +62,26 @@ ActiveRecord::Schema.define(version: 20160426095659) do
     t.string   "ca_trs"
     t.string   "st_met"
     t.string   "mo_sup"
+    t.string   "support"
+    t.string   "design"
+    t.string   "feeling"
+    t.string   "payment"
   end
 
   add_index "brokers", ["name"], name: "index_brokers_on_name", unique: true
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "broker_id"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
+    t.string   "support"
+    t.string   "design"
+    t.string   "feeling"
+    t.string   "payment"
+  end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -79,8 +103,34 @@ ActiveRecord::Schema.define(version: 20160426095659) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "state"
+    t.string   "profile"
+    t.string   "age"
+    t.string   "experience"
+    t.string   "prefecture"
+    t.string   "image"
+    t.string   "image_cache"
+    t.string   "remove_image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+
+  create_table "writes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "board_id"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "writings", force: :cascade do |t|
+    t.integer  "board_id"
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "user_id"
+  end
+
+  add_index "writings", ["board_id"], name: "index_writings_on_board_id"
 
 end

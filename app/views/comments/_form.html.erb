@@ -1,0 +1,36 @@
+<%= form_for(@comment) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+        <% @comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :broker_id %>
+  
+  <div class="field">
+    <h3><%= f.label :評価する %></h3>
+    <%= f.label :サポート %><br>
+    <%= select(:comment, :support , Comment.support_choices) %>
+    <%= f.label :デザイン %><br>
+    <%= select(:comment, :design , Comment.design_choices) %>
+    <%= f.label :使用感 %><br>
+    <%= select(:comment, :feeling , Comment.feeling_choices) %>
+    <%= f.label :出金対応 %><br>
+    <%= select(:comment, :payment , Comment.payment_choices) %>
+    <%= f.label :タイトル %><br>
+    <%= f.text_field :title %>
+    <%= f.label :内容 %><br>
+    <%= f.text_area :body %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

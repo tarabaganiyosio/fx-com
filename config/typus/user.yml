@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+User:
+  fields:
+    default: name, email, password_digest, state, profile, age, experience, prefecture, image, image_cache, remove_image
+    form: name, email, password_digest, state, profile, age, experience, prefecture, image, image_cache, remove_image
+  relationships: comments, boards
+  application: Application

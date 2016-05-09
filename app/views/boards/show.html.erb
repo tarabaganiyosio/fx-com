@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>掲示板</h2>
+    <div class="content">
+        <h2><%= @board.title %></h2>
+        <ul class="boards">
+            
+          <% @writes.each_with_index do |write, index| %>
+            <li class="board">
+                <div class="board_thum">
+                <%= image_tag write.user.image.url %>
+                </div>
+                <a><%= index + 1 %>：<%= write.user.name %> <%= write.created_at.strftime("%Y/%m/%d %H:%M:%S ") %></a>
+                <p><%= write.body %></p>
+                <% if logged_in? && write.user == current_user %>
+                <%= link_to '×', write_path(write), method: :delete %>
+                <% end %>
+            </li>
+          <% end %>
+          </ul>
+          <% if logged_in? %>
+            <%= render 'writes/form' %>
+          <% end %>
+          
+          
+          <% if logged_in? && @write.user == current_user %>
+          <% end %>
+    </div>

@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/typus/typus.git
+  revision: 85e5f67a6ae96898c84eed0794dd7f0a1339e27d
+  specs:
+    typus (4.0.0.beta1)
+      bcrypt (~> 3.1.11)
+      rails (~> 4.2.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -90,6 +98,7 @@ GEM
     multi_json (1.11.3)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    normalize-rails (4.1.1)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -142,8 +151,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
-    turbolinks (2.5.3)
-      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -167,12 +174,13 @@ DEPENDENCIES
   friendly_id
   jbuilder (~> 2.0)
   jquery-rails
+  normalize-rails
   rails (= 4.2.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
   sqlite3
-  turbolinks
+  typus!
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 

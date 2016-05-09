@@ -1,13 +1,29 @@
-<div class="top-bar">
-    <a class="login" href="/login">ログイン</a>
-    <a class="signup" href="/signup">新規登録</a>
-    <a class="beg" href="#">🔰 初めての方へ</a>
-    <%= link_to "ぷるぷる", 'addbroker' %>
-</div><!--top-bar-->
-
 <header>
     <div class="header-in">
         <h1><%= link_to "ミンコエ", root_path, id: "logo" , class: "page-title" %></h1>
         <p>みんなでレビューしてみんなでつくるランキングサイト</p>
+        <%= link_to '', new_broker_path , {:class => 'add-broker'} %>
     </div><!--header-in-->
+    <a class="show-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
 </header>
+    <div class="wrapper-alert">
+    <% flash.each do |message_type, message| %>
+      <a class="alert alert-<%= message_type %>"><%= message %></a>
+    <% end %>
+    </div>
+<div class="top-bar">
+    <% if logged_in? %>
+        <%= link_to 'マイページ' , current_user , {:class => 'green-btn'} %>
+        <%= link_to 'ホーム' , root_path , {:class => 'orange-btn'} %>
+        <%= link_to '掲示板' , boards_path , {:class => 'orange-btn'} %>
+        <%= link_to 'ランキング一覧' , '#' , {:class => 'orange-btn'} %>
+        <%= link_to 'ログアウト' , logout_path , {:method => 'delete' , :class => 'orange-btn'} %>
+    <% else %>
+        <%= link_to '🔰 初めての方へ' , '#' , {:class => 'green-btn'} %>
+        <%= link_to '新規登録' , signup_path , {:class => 'green-btn'} %>
+        <%= link_to 'ログイン' , login_path , {:class => 'orange-btn'} %>
+        <%= link_to 'ホーム' , root_path , {:class => 'orange-btn'} %>
+        <%= link_to '掲示板' , boards_path , {:class => 'orange-btn'} %>
+        <%= link_to 'ランキング一覧' , '#' , {:class => 'orange-btn'} %>
+    <% end %>
+</div><!--top-bar-->

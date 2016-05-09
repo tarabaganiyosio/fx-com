@@ -1,5 +1,5 @@
-<h2><%= @broker.name %></h2>
 <div class="container">
+    <h2><%= @broker.name %></h2>
     <div class="top-content">
         
         <% if @broker.image? %>
@@ -7,19 +7,54 @@
             <%= image_tag @broker.image.url %>
         </div>
         <% end %>
-        
-        <ul class="top-list">
+        <ul class="top-list">                                                                  
             <li><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i>レビューする</a></li>
             <li><p>吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。</p></li>
             <li><p>吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。</p></li>
         </ul><!--top-list-->
     </div><!--top-content-->
     <div class="content">
+        <h2>ユーザーの評価</h2>
+        <div class="reviews">
+            <% @comments.each do |comment| %>
+            <div class="review">
+                <div class="user-icon">
+                    <%= image_tag comment.user.image %>
+                </div>
+                 <%= comment.user.name %>
+                <p class="eva-t"><%= comment.title %></p>
+                <p class="eva-s"><%= comment.body %></p>
+                <ul class="eva-li">
+                    <li>
+                        <span>サポート</span><%= comment.support %>
+                    </li>
+                    <li>
+                        <span>デザイン</span><%= comment.design %>
+                    </li>
+                    <li>
+                        <span>使用感</span><%= comment.feeling %>
+                    </li>
+                    <li>
+                        <span>出金対応</span><%= comment.payment %>
+                    </li>
+                </ul>
+            </div>
+            <% if logged_in? && comment.user == current_user %>
+                <a><%= link_to '削除', comment_path(comment), method: :delete %></a>
+            <% end %>
+          <% end %>
+          <% if logged_in? %>
+            <%= render 'comments/form' %>
+            <% else %>
+            <h3>評価をするにはログインが必要です</h3>
+          <% end %>
+          </div>
     <h2>ブローカー詳細</h2>
     
     <p class="bro-pro"><%= @broker.b_pro %></p>
     
     <h3>ブローカー情報</h3>
+    
     <table>
     <tr>
         <th>所在地</th>

@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Write:
+  fields:
+    default: user_id, board_id, body
+    form: user_id, board_id, body
+  relationships: 
+  application: Application

@@ -1,25 +1,17 @@
-<h2>新規ユーザー登録</h2>
+
 <div class="container">
-    <!--
-    <div class="top-content">
-        
-        <div class="thumbnail">
-        </div>
-        
-        <ul class="top-list">
-            <li><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i>レビューする</a></li>
-            <li><p>吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。</p></li>
-            <li><p>吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。吾輩は猫である名前は渋井丸拓男。</p></li>
-        </ul>
-    </div>-->
-    
+    <h2>新規ユーザー登録</h2>
     <div class="content">
         <h2>アカウント情報入力</h2>
         <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         
+        <h3>必須項目</h3>
         <%= f.label :ユーザー名 %>
         <%= f.text_field :name %>
+        
+        <%= f.label :FX経験 %>
+        <%= select(:user, :experience , User.experience_choices) %>
         
         <%= f.label :メールアドレス %>
         <%= f.text_field :email %>
@@ -29,6 +21,22 @@
         
         <%= f.label :password_confirmation, "⚠ パスワード（確認用）" %>
         <%= f.password_field :password_confirmation %>
+        
+        
+        <h3>任意項目</h3>
+        
+        <% if @user.image? %>
+        <%= image_tag @user.image.url %>
+        <% end %>
+        <%= f.label :アイコン画像 %>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+        
+        <%= f.label :自己紹介文 %>
+        <%= f.text_area :profile %>
+        
+        <%= f.label :お住まいの地域 %>
+        <%= select(:user, :prefecture , User.prefecture_choices) %>
         
         <%= f.submit "アカウント作成", class: "btn btn-large btn-primary" %>
         <% end %>

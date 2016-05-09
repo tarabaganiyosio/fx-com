@@ -1,6 +1,31 @@
-<h2><%= @user.name %>さんのページ</h2>
 <div class="container">
+    <h2><%= @user.name %>さんのページ</h2>
     <div class="content">
+        
         <h2>ユーザー情報</h2>
         <h3><%= @user.name %>さん</h3>
+        
+        <% if @user.image? %>
+        <div class="user-icon">
+            <%= image_tag @user.image.url %>
+        </div>
+        <% end %>
+        
+        <h4>メッセージ</h4>
+        <p><%= @user.profile %></p>
+        
+        <h4>FX経験</h4>
+        <p><%= @user.experience %></p>
+        
+        <h4>お住まいの地域</h4>
+        <p><%= @user.prefecture %></p>
+        
+        <h3>ブローカーへの評価一覧</h3>
+        <% @user.comments.each do |comment| %>
+            <p><%= comment.body %></p>
+        <% end %>
+        
+        <% if logged_in? && @user == current_user %>
+            <a><%= link_to "設定", edit_user_path , {:class => 'user-edit'}%></a>
+        <% end %>
     </div><!--content-->

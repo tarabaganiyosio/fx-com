@@ -1,0 +1,25 @@
+<div class="container">
+<div class="content">
+<h2>評価内容</h2>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ユーザー:</strong>
+  <%= @comment.user_id %>
+</p>
+
+<p>
+  <strong>ブローカー:</strong>
+  <%= @comment.broker_id %>
+</p>
+
+<p>
+  <strong>内容:</strong>
+  <%= @comment.body %>
+</p>
+<p>
+<%= link_to '編集', edit_comment_path(@comment) %> |
+<%= link_to '戻る', comments_path %>
+</p>
+</div>

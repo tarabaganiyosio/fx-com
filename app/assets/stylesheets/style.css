@@ -4,45 +4,6 @@ html, body{
     font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN", "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
 }
 
-
-/*TOP BAR*/
-.top-bar{
-    width: 1100px;
-    height: 40px;
-    margin: 10px auto;
-    display: block;
-}
-
-.top-bar a{
-    display: inline-block;
-    float: right;
-}
-
-.beg{
-    line-height: 40px;
-    padding: 0 2em;
-    color: #2b2b2b;
-}
-
-.login{
-    color: #f5f5f5;
-    background: #e67e17;
-    line-height: 20px;
-    font-size: 18px;
-    padding: 10px 2em;
-    border-radius: 5px;
-}
-
-.signup{
-    color: #f5f5f5;
-    background: #3cb371;
-    line-height: 20px;
-    font-size: 18px;
-    padding: 10px 2em;
-    border-radius: 5px;
-    margin-right: 1em;
-}
-
 /*HEADER*/
 header{
     width: 100%;
@@ -73,6 +34,46 @@ header{
     color: rgba(86,250,214,1);
 }
 
+.add-broker{
+    display: none;
+}
+
+.show-menu{
+    display: none;
+}
+
+/*TOP BAR*/
+.top-bar{
+    width: 1100px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+.top-bar a{
+    display: inline-block;
+    line-height: 20px;
+    font-size: 18px;
+    padding: 10px 1em;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 1em 10px 0;
+}
+
+.white-btn{
+    color: #1e90ff;
+    border: solid 1px #1e90ff;
+}
+
+.green-btn{
+    color: #f5f5f5;
+    background: #3cb371;
+}
+
+.orange-btn{
+    color: #f5f5f5;
+    background: #e67e17;
+}
 
 /*CONTANER*/
 .wrapper-container{
@@ -81,13 +82,13 @@ header{
 
 .wrapper-container h2{
     display: block;
-    font-size: 28px;
+    font-size: 22px;
     line-height: 2.5em;
     text-align: center;
     color: #f5f5f5;
     background: rgba(22,82,122,1);
     margin: 5px 0;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
 }
 
 .container{
@@ -111,7 +112,6 @@ header{
     width: 100%;
     height: 100%;
 }
-
 
 /*TOP LIST*/
 .top-list{
@@ -154,32 +154,40 @@ header{
     background: rgba(255,250,234,1);
     float: left;
     padding: 0 0 100px 0;
-    margin: 0 0 100px 0;
+    margin: 10px 0 100px 0;
+}
+
+.content h2{
+    font-size: 18px;
+    margin: 0 0 20px 0;
+}
+
+.content h2 a{
+    color: #f5f5f5;
 }
 
 .content h3{
     display: block;
     width: 90%;
-    margin: 0 auto;
-    margin-top: 2em;
+    margin: 2em auto;
     background: rgba(0,153,165,1);
     color: #f5f5f5;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 2.6em;
     text-indent: 2em;
 }
 
-.bro-pro{
+.content h4{
     display: block;
-    font-size: 15px;
-    line-height: 1.7em;
-    width: 80%;
+    width: 90%;
+    font-size: 17px;
+    color: #008080;
+    text-indent: 1em;
     margin: 0 auto;
-    margin-top: 2em;
-    padding: 5%;
-    background: #e6e6fa;
-    color: #2b2b2b;
-    border-radius: 8px;
+    padding: 0.5em 0;
+    border-left: solid 3px #008080;
+    background: #fff;
+    
 }
 
 .content table{
@@ -215,6 +223,22 @@ header{
     line-height: 1.6em;
 }
 
+.users{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.user-edit{
+    display: block;
+    color: #777;
+    padding: 1em 0;
+    width: 5em;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
 /*FORM IN CONTENT*/
 .container form{
     width: 90%;
@@ -224,7 +248,7 @@ header{
 .container form h3{
     display: block;
     width: 100%;
-    margin: 100px 0 30px 0;
+    margin: 20px 0 30px 0;
 }
 
 input, textarea, select, .uneditable-input{
@@ -232,7 +256,9 @@ input, textarea, select, .uneditable-input{
     width: 100%;
     margin: 0 auto;
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 16px;
+    padding: 0.5em 0;
+    text-indent: 0.5em;
 }
 
 label{
@@ -258,6 +284,7 @@ input {
     width: 390px;
     float: right;
     background: #f5f5f5;
+    text-align: center;
 }
 
 .side-bar h2{
@@ -272,6 +299,18 @@ input {
     padding: 1em;
 }
 
+.side-bar a{
+    display: block;
+    font-size: 18px;
+    color: #2b2b2b;
+    line-height: 40px;
+    text-indent: 1em;
+    transition: all 0.2s ease-in;
+}
+
+.side-bar a:hover{
+    color: #999;
+}
 
 /*FOOTER*/
 footer{
@@ -283,4 +322,316 @@ footer{
     font-size: 20px;
     line-height: 60px;
     text-align: center;
+}
+
+/*ERROE*/
+#error_explanation{
+    display: block;
+}
+
+.alert-danger{
+    color: #ff6347;
+}
+
+#error_explanation ul li{
+    color: #ff6347;
+    display: inline-block;
+    padding: 10px;
+    border: solid 1px #ff6347;
+    margin: 0 10px 15px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    transform: rotateZ(-4deg);
+    font-family: "HanziPen TC"; font-weight: bold;
+}
+
+.alert h3{
+    background: #ff6347;
+}
+
+.wrapper-alert{
+    display: block;
+    text-align: left;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.alert{
+    line-height: 2em;
+    color: #1e90ff;
+}
+
+/*BROKERS*/
+.brokers{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.brokers li {
+    margin: 60px 0;
+}
+
+.reviews{
+    margin: 0;
+    padding: 50px;
+}
+
+.review{
+    margin: 20px 0;
+    background: #fff;
+    padding: 15px;
+}
+
+.eva-t{
+    display: block;
+    border:solid 2px #2b2b2b;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    background: #fff;
+}
+
+.eva-s{
+    display: inline-block;
+    box-sizing: border-box;
+    border: solid 10px #cdcdcd;
+    padding: 1em;
+    margin:0;
+}
+
+.eva-li{
+    padding: 0.5em 0;
+    letter-spacing: 0.1em;
+}
+
+.eva-li span{
+    display: inline-block;
+    width: 5em;
+    color: #2b2b2b;
+    font-weight: bold;
+}
+
+.user-icon{
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+}
+
+.user-icon img{
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+/*boards*/
+.boards{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.board{
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    padding: 20px 0 20px 10px;
+    border-left: solid 3px #999;
+}
+
+.board_thum{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    float: left;
+    background: #999;
+}
+
+.board_thum img{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+}
+
+.board a{
+    display: inline-block;
+    width: 85%;
+    font-size: 18px;
+    line-height: 60px;
+    text-indent: 1em;
+}
+
+.board p{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+/*writings*/
+.writings {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.writings li p span{
+    color: #993842;
+}
+
+.writings li{
+    padding: 20px 0;
+    margin: 10px;
+}
+
+@media (max-width: 1100px){
+    
+    .top-bar, .header-in, .container{
+        width: 100%;
+    }
+    
+    .content, .side-bar{
+        display: block;
+        width: 95%;
+        float: none;
+        margin: 50px auto;
+        padding: 0;
+        clear: both;
+    }
+    
+    header{
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    .header-in{
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .page-title{
+        display: block;
+        font-size: 27px;
+        line-height: 2em;
+        text-align: center;
+        text-indent: 0em;
+    }
+    
+    .show-menu{
+        position: absolute;
+        display: block;
+        font-size: 27px;
+        line-height: 2em;
+        width: 2em;
+        text-align: center;
+        color: #fff0e6;
+        top: 0;
+        bottom: 0;
+        right: 0em;
+        margin: auto;
+    }
+    
+    .header-in p, .add-broker{
+        display: none;
+    }
+    
+    .top-bar{
+        display: none;
+        height: auto;
+        margin: 0px auto;
+        margin-bottom: 0px;
+        border-top: solid 1px #2b2b2b;
+        overflow: hidden;
+    }
+    
+    .top-bar a{
+        display: block;
+        line-height: 1em;
+        font-size: 20px;
+        padding: 0.5em 1em;
+        border-radius: 0px;
+        box-sizing: border-box;
+        margin-right: 0;
+        border-bottom: solid 1px #2b2b2b;
+    }
+    
+    .white-btn{
+        color: #2b2b2b;
+        border: none;
+    }
+    
+    .wrapper-container h2{
+        display: block;
+        font-size: 20px;
+        line-height: 2.5em;
+        text-align: center;
+        color: #f5f5f5;
+        background: rgba(22,82,122,1);
+        margin: 10px 0 0 0;
+        letter-spacing: 0.1em;
+    }
+    
+    .thumbnail{
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+    
+    /*TOP LIST*/
+    .top-list{
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .top-list li{
+        width: 90%;
+        height: auto;
+    }
+    
+    .top-list li a{
+        font-size: 20px;
+        line-height: 3em;
+    }
+    
+    .top-list li p{
+        text-align: left;
+    }
+    
+    /*CONTENT*/
+    .content{
+    }
+    
+    .content h2{
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    .content h3{
+        display: block;
+        width: 90%;
+        margin: 2em auto;
+        font-size: 15px;
+        line-height: 2.6em;
+        text-indent: 0.5em;
+        text-align: left;
+    }
+    
+    .content h4{
+        font-size: 15px;
+    }
+    
+    .content P{
+        font-size: 15px;
+    }
+    
+    .content table{
+        overflow: hidden;
+    }
+    
+    .content table td{
+        white-space: normal;
+    }
 }

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @write.user_id %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @write.board_id %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @write.body %>
+</p>
+
+<%= link_to 'Edit', edit_write_path(@write) %> |
+<%= link_to 'Back', writes_path %>

@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>掲示板のページ</h2>
+<div class="content">
+    <h2>スレッド一覧</h2>
+    <% if logged_in? %>
+        <h3>スレッドを新規作成</h3>
+        <%= form_for @board do |f| %>
+        <%= f.text_field :title , {placeholder: "スレッド名" } %> <br>
+        <%= f.submit (["スレッドを作成"]) %>
+    <% end %>
+    <% else %>
+        <h3>スレッドの作成にはログインが必要です</h3>
+    <% end %>
+    <ul class="boards">
+        <% @boards.each do |board| %>
+        	<h3><%= link_to board.title, board_path(board) %></h3>
+        <% end %>
+    </ul>
+</div>

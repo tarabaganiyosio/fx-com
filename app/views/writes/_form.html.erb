@@ -1,0 +1,23 @@
+<%= form_for(@write) do |f| %>
+  <% if @write.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@write.errors.count, "error") %> prohibited this write from being saved:</h2>
+
+      <ul>
+      <% @write.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :board_id %>
+  <div class="field">
+    <h3><%= @write.user.name %>としてコメントする</h3>
+    <%= f.text_area :body , {placeholder: "コメントを入力" } %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

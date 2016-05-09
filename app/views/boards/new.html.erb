@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>掲示板</h2>
+<div class="content">
+
+<h2>新規スレッド作成</h2>
+
+<%= form_for @board do |f| %>
+    <%= f.text_field :title , {placeholder: "スレッド名" } %> <br>
+    <%= f.submit (["スレッドを作成"]) %>
+<% end %>
+<%= link_to "スレッド一覧に戻る", boards_path %>
+</div>

@@ -5,4 +5,6 @@ class Broker < ActiveRecord::Base
   friendly_id :name  # idカラムの代わりにnameカラムをURLのIDとする
   
   mount_uploader :image, ImageUploader
+  
+  has_many :comments
 end

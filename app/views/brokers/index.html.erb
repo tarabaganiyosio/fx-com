@@ -1,0 +1,13 @@
+<div class="container">
+<h2>全てのブローカー</h2>
+<div class="content">
+    <h2>ブローカー 一覧</h2>
+  <ul class="brokers">
+    <% @brokers.each do |broker| %>
+      <li>
+        <h3><%= link_to broker.name, broker %></h3>
+        <p><%= broker.b_pro %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>

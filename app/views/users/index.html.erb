@@ -1,0 +1,12 @@
+<div class="container">
+<h2>全てのユーザー</h2>
+<div class="content">
+  <ul class="users">
+    <% @users.each do |user| %>
+    <li class="user">
+      <h3><%= link_to user.name, user %></h3>
+      <p>FX経験 (<%= user.experience %>)</p>
+    </li>
+    <% end %>
+  </ul>
+</div>

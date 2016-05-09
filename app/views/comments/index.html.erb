@@ -1,0 +1,27 @@
+<div class="container">
+<div class="content">
+<h2>全てのコメント</h2>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>ユーザー</th>
+      <th>ブローカー</th>
+      <th>内容</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.user_id %></td>
+        <td><%= comment.broker_id %></td>
+        <td><%= comment.body %></td>
+        <td><%= link_to '編集', edit_comment_path(comment) %></td>
+        <td><%= link_to '削除', comment, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

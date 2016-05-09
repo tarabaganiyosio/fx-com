@@ -1,22 +1,43 @@
-<h2>ユーザー情報</h2>
 <div class="container">
+    <h2><%= @user.name %>さんのページ</h2>
     <div class="content">
-        <h2>設定の変更</h2>
-        <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
-        
-        <%= f.label :ユーザー名 %>
-        <%= f.text_field :name %>
-        
-        <%= f.label :メールアドレス %>
-        <%= f.text_field :email %>
-        
-        <%= f.label :パスワード %>
-        <%= f.password_field :password %>
-        
-        <%= f.label :password_confirmation, "⚠ パスワード（確認用）" %>
-        <%= f.password_field :password_confirmation %>
-        
-        <%= f.submit "変更を保存", class: "btn btn-large btn-primary" %>
-        <% end %>
+        <% if logged_in? && @user == current_user %>
+            <h2>設定の変更</h2>
+            <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            
+            <% if @user.image? %>
+            
+            <%= image_tag @user.image.url %>
+            
+            <% end %><br>
+            <%= f.label :アイコン画像 %><br>
+            <%= f.file_field :image %>
+            <%= f.hidden_field :image_cache %>
+            
+            <%= f.label :FX経験 %>
+            <%= select(:user, :experience , User.experience_choices) %>
+            
+            <%= f.label :メールアドレス %>
+            <%= f.text_field :email %>
+            
+            <%= f.label :パスワード %>
+            <%= f.password_field :password %>
+            
+            <%= f.label :password_confirmation, "⚠ パスワード（確認用）" %>
+            <%= f.password_field :password_confirmation %>
+            
+            
+            <h3>任意項目</h3>
+            <%= f.label :自己紹介文 %>
+            <%= f.text_area :profile %>
+            
+            <%= f.label :お住まいの地域 %>
+            <%= select(:user, :prefecture , User.prefecture_choices) %>
+            
+            <%= f.submit "変更を保存", class: "btn btn-large btn-primary" %>
+            <% end %>
+            <% else %>
+            <p>ERROR</p>
+            <% end %>
     </div><!--content-->
