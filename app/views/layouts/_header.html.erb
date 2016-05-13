@@ -25,5 +25,6 @@
         <%= link_to 'ホーム' , root_path , {:class => 'orange-btn'} %>
         <%= link_to '掲示板' , boards_path , {:class => 'orange-btn'} %>
         <%= link_to 'ランキング一覧' , '#' , {:class => 'orange-btn'} %>
+        <%= link_to "🐦", user_omniauth_authorize_path(:twitter) %>
     <% end %>
 </div><!--top-bar-->

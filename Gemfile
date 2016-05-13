@@ -54,6 +54,8 @@ gem 'typus', git: 'https://github.com/typus/typus.git', branch: '4-2-stable'
 gem 'kaminari'
 gem 'rails-i18n'
 
+gem 'omniauth-twitter'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

@@ -71,4 +71,12 @@ class User < ActiveRecord::Base
          ["５年未満"],
          ["５年以上"]]
     end
+    
+    # Include default devise modules. Others available are:
+    # :confirmable, :lockable and :timeoutable
+    devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable, omniauth_providers: [:twitter]
+    
+    validates :username, presence: true, uniqueness: true
 end
