@@ -124,7 +124,6 @@ ActiveRecord::Schema.define(version: 20160509155955) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "state"
     t.string   "profile"
     t.string   "age"
     t.string   "experience"
@@ -143,16 +142,5 @@ ActiveRecord::Schema.define(version: 20160509155955) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "writings", force: :cascade do |t|
-    t.integer  "board_id"
-    t.string   "name"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "user_id"
-  end
-
-  add_index "writings", ["board_id"], name: "index_writings_on_board_id"
 
 end

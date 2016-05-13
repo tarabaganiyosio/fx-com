@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      admin_user: "ユーザ"
+    attributes:
+      admin_user:
+        email: "メールアドレス"
+        first_name: "名"
+        last_name: "姓"
+        role: "権限"
+        status: "有効 / 無効"
+        locale: "言語"
+        password: "パスワード"
+        password_confirmation: "パスワード（確認）"

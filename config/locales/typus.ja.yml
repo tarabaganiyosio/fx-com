@@ -1,0 +1,94 @@
+ja:
+  "Actions": "アクション"
+  "Active": "有効"
+  "Admin": "ユーザ管理"
+  "Add": "新規登録"
+  "Add %{resource}": "%{resource} を新規登録"
+  "Add New": "新規登録"
+  "All": "すべて"
+  "Application": "業務"
+  "Are you sure?": "本当によろしいですか？"
+
+  "Back to list": "一覧へ戻る"
+
+  "Change %{attribute}?": "%{attribute} を変更しますか？"
+  "Create %{resource}": "%{resource} を登録する"
+
+  "Destroy": "削除"
+  "Dashboard": "ダッシュボード"
+  "Developed by": "Developed by"
+  "Down": "下"
+
+  "Edit": "編集"
+  "Edit %{resource}": "%{resource} を編集"
+  "Enter your email below to create the first user": "最初のユーザのメールアドレスを入力してください"
+  "Error": "エラー"
+  "Errors": "複数のエラー"
+
+  "False": "False"
+  "Filter": "検索"
+
+  "I remember my password": "私はパスワードを覚えています"
+  "If you didn't request a password update, you can ignore this message": "あなたがパスワード更新を要求しなかったのなら、このメッセージを無視してください"
+  "If you have made any changes to the fields without clicking the Save/Update entry button, your changes will be lost": "保存 / 更新ボタンを押さない場合、あなたが入力した変更は失われる可能性があります"
+  "Inactive": "無効"
+
+  "Last few days": "最近の数日"
+  "Last 30 days": "最近30日間"
+  "Last 7 days": "最近7日間"
+  "Loading": "読み込み中"
+  "Login": "ログイン"
+
+  "New": "新"
+  "New %{resource}": "新しい %{resource}"
+  "Next": "次"
+  "No %{resources} found": "%{resources} は見つかりませんでした"
+  "No entries found": "データがありません"
+
+  "Or": "または"
+
+  "Password recovery link sent to your email": "パスワードリカバリのためのメールがあなたのメールアドレスへ送信されました"
+  "Please set a new password.": "新しいパスワードを入力してください"
+  "Previous": "前"
+
+  "Record moved %{to}": "Record spostato %{to}"
+  "Recover password": "Recupera la password"
+  "Remove": "削除"
+  "Remove %{resource}?": "%{resource} を削除しますか？"
+  "Reset password": "パスワードをリセット"
+  "Resources": "データ"
+
+  "Site administration": "管理メニュー"
+
+  "Save %{resource}": "%{resource} を保存する"
+  "Save": "保存"
+  "Save and add another": "保存してさらに新規登録する"
+  "Save and continue editing": "保存して編集を続ける"
+  "Search": "検索する"
+  "Show": "見る"
+  "Show all dates": "すべての日付を見る"
+  "Show by %{attribute}": "%{attribute} でフィルタリング"
+  "Show %{resource}": "%{resource} を見る"
+  "Sign in": "サインイン"
+  "Sign out": "サインアウト"
+  "Sign up": "サインアップ"
+  "Submit": "決定"
+  "System Users Administration": "システムユーザ管理"
+
+  "Today": "きょう"
+  "Trash": "削除しますか"
+  "True": "True"
+
+  "Up": "上"
+
+  "View all %{attribute}": "すべての %{attribute} を見る"
+  "View site": "サイトを見る"
+
+  "You can update your password at": "ここでパスワードを更新できます"
+  "You can't change your role": "あなたは権限を変更できません"
+  "You can't toggle your status": "あなたはアカウントの有効 / 無効を変更できません"
+  "Your new password is %{password}": "新しいパスワードは %{password} です"
+
+  "%{model} successfully created": "%{model} をつくりました"
+  "%{model} successfully removed": "%{model} を削除しました"
+  "%{model} successfully updated": "%{model} を更新しました"
